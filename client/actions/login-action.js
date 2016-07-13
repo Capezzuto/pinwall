@@ -5,22 +5,6 @@ export const NOTES = 'NOTES';
 export const USER_INFO = 'USER_INFO';
 export const ORGS = 'ORGS';
 
-// export function login(user, pass, organizationId) {
-//   console.log('in login', organizationId);
-//   return function(dispatch) {
-//     let url = `api/organizations/${organizationId}/notes`;
-//     axios.get(url)
-//       .then(function(response) {
-//         dispatch({ type: NOTES, payload: response });
-//         console.log('payload in login=', response);
-//         browserHistory.push(`/${organizationId}`);
-//       });
-//   }
-// }
-
-
-//first get organization options, then get messages, then get categories
-//for now, just get categories
 export function login(email, password) {
   return function(dispatch) {
     let url = 'api/users/login';

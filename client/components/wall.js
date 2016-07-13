@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import NotePreview from './note-preview.js';
-import { selectCurrentNote } from '../actions/current-note-action.js'
+import { selectCurrentNote } from '../actions/current-note-action.js';
 //import Dummy from '../dummy_data.js';
 
 class Wall extends Component {
@@ -34,9 +34,10 @@ class Wall extends Component {
 
   render() {
     return (
-      <div id="notes">
-        <h2>Wall</h2>
-        {this.renderNotes()}
+      <div className="container" id="notes">
+        <row >
+          {this.renderNotes()}
+        </row>
       </div>
     )
   }
