@@ -14,15 +14,16 @@ class Note extends Component {
     }
     console.log("user:", this.props.user);
     let current = this.props.currentNote;
+    //change this after merge with new routes
     let returnPath = `/${this.props.user.currentOrg}`
     return(
       <div className="container" id="note_show">
         <div className="row">
           <div className="title col-xs-12">
             <h1>{this.props.currentNote.title}</h1>
-            <ul style={{display: 'inline-block'}}>
-              <li style={{float: 'left'}}><Link to="/">Edit</Link></li>
-              <li style={{float: 'left'}}><Link to="/">Delete</Link></li>
+            <ul style={{display: 'inline-block', 'list-style': 'none'}}>
+              <li style={{display: 'inline-block', float: 'left'}}><Link to="/">Edit</Link></li>
+              <li style={{display: 'inline-block', float: 'left'}}><Link to="/">Delete</Link></li>
             </ul>
           </div>
           <div className="row">
